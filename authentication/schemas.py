@@ -1,3 +1,5 @@
+from pydantic import BaseModel, EmailStr
+
 class UserBase(BaseModel):
     email: EmailStr
 
@@ -12,4 +14,4 @@ class User(UserBase):
 
 class UserRead(UserBase):
     id: int
-    
+
